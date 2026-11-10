@@ -1,0 +1,911 @@
+﻿<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Vitaly — Estética &amp; Bem-Estar</title>
+  <!-- Google Fonts: Bodoni Moda (editorial display/headlines) & Manrope (clean grotesk body/labels) -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Material Symbols Outlined -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Tailwind CSS v3 with configuration -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed": "#2e1500",
+            "surface-bright": "#fff8f3",
+            "on-secondary": "#ffffff",
+            "tertiary-container": "#3a1d00",
+            "on-surface": "#201b14",
+            "inverse-primary": "#d0c4be",
+            "surface": "#fff8f3",
+            "surface-container-lowest": "#ffffff",
+            "surface-tint": "#655d58",
+            "background": "#fff8f3",
+            "on-error-container": "#93000a",
+            "on-error": "#ffffff",
+            "on-primary-fixed-variant": "#4d4541",
+            "surface-container-high": "#f2e6da",
+            "on-tertiary": "#ffffff",
+            "surface-dim": "#e4d8cc",
+            "on-surface-variant": "#4d4540",
+            "outline": "#7f756f",
+            "secondary-container": "#ffb689",
+            "error": "#ba1a1a",
+            "inverse-surface": "#362f27",
+            "primary": "#130e0a",
+            "inverse-on-surface": "#fbefe3",
+            "primary-fixed-dim": "#d0c4be",
+            "primary-fixed": "#ece0da",
+            "tertiary-fixed-dim": "#f4bb8b",
+            "tertiary-fixed": "#ffdcc1",
+            "on-primary-container": "#938984",
+            "secondary-fixed-dim": "#ffb689",
+            "primary-container": "#29231f",
+            "surface-variant": "#ece1d5",
+            "on-background": "#201b14",
+            "error-container": "#ffdad6",
+            "secondary-fixed": "#ffdbc8",
+            "secondary": "#88512b",
+            "surface-container-low": "#fef2e5",
+            "on-primary-fixed": "#201a17",
+            "on-tertiary-fixed-variant": "#643e19",
+            "tertiary": "#1c0b00",
+            "surface-container": "#f8ece0",
+            "on-secondary-fixed-variant": "#6c3a16",
+            "on-secondary-fixed": "#311300",
+            "surface-container-highest": "#ece1d5",
+            "outline-variant": "#d0c4bd",
+            "on-primary": "#ffffff",
+            "on-secondary-container": "#7a4521",
+            "on-tertiary-container": "#b28156"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "gutter-mobile": "1rem",
+            "margin-mobile": "1.5rem",
+            "space-lg": "2rem",
+            "space-md": "1rem",
+            "gutter": "2rem",
+            "space-xs": "0.25rem",
+            "margin": "4rem",
+            "space-xl": "4rem"
+          },
+          "fontFamily": {
+            "display-hero": ["Bodoni Moda"],
+            "headline-md": ["Bodoni Moda"],
+            "headline-sm": ["Bodoni Moda"],
+            "headline-lg": ["Bodoni Moda"],
+            "display-hero-mobile": ["Bodoni Moda"],
+            "body-sm": ["Manrope"],
+            "body-md": ["Manrope"],
+            "label-sm": ["Manrope"],
+            "label-md": ["Manrope"],
+            "body-lg": ["Manrope"],
+            "label-lg": ["Manrope"],
+            "headline-lg-mobile": ["Bodoni Moda"]
+          },
+          "fontSize": {
+            "display-hero": ["4.5rem", { "lineHeight": "1.05", "letterSpacing": "-0.03em", "fontWeight": "400" }],
+            "headline-md": ["2rem", { "lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "headline-sm": ["1.5rem", { "lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "500" }],
+            "headline-lg": ["3rem", { "lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "display-hero-mobile": ["2.75rem", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "body-sm": ["0.875rem", { "lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "body-md": ["1rem", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-sm": ["0.6875rem", { "lineHeight": "1.2", "letterSpacing": "0.2em", "fontWeight": "700" }],
+            "label-md": ["0.75rem", { "lineHeight": "1.2", "letterSpacing": "0.15em", "fontWeight": "600" }],
+            "body-lg": ["1.125rem", { "lineHeight": "1.7", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "label-lg": ["0.875rem", { "lineHeight": "1.2", "letterSpacing": "0.12em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["2rem", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+    }
+
+    /* Hairline frame utility & 90 deg corners */
+    .architectural-frame {
+      border: 1px solid #d0c4bd;
+    }
+
+    .shadow-planar {
+      box-shadow: 3px 3px 0px #29231f;
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface antialiased selection:bg-secondary-fixed selection:text-primary">
+  <!-- TOP NAV BAR (SHARED COMPONENT) -->
+  <header
+    class="w-full sticky top-0 z-50 px-6 md:px-16 py-5 flex items-center justify-between bg-surface dark:bg-primary border-b border-outline-variant dark:border-primary-container">
+    <!-- Brand Anchor -->
+    <a class="flex flex-col" href="#">
+      <span class="text-headline-md font-headline-md tracking-tight text-primary dark:text-surface">Vitaly</span>
+      <span class="text-[9px] uppercase tracking-[0.25em] text-on-surface-variant -mt-1 font-label-sm">Estética &amp;
+        Bem-Estar</span>
+    </a>
+    <!-- Navigation Links -->
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="text-label-md font-label-md uppercase text-on-surface dark:text-inverse-on-surface pb-1 hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200"
+        href="#filosofia">Filosofia</a>
+      <a class="text-label-md font-label-md uppercase text-secondary dark:text-secondary-fixed border-b border-secondary dark:border-secondary-fixed pb-1 hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200"
+        href="#procedimentos">Procedimentos</a>
+      <a class="text-label-md font-label-md uppercase text-on-surface dark:text-inverse-on-surface pb-1 hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200"
+        href="#resultados">Resultados</a>
+      <a class="text-label-md font-label-md uppercase text-on-surface dark:text-inverse-on-surface pb-1 hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200"
+        href="#diferenciais">Diferenciais</a>
+      <a class="text-label-md font-label-md uppercase text-on-surface dark:text-inverse-on-surface pb-1 hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-200"
+        href="#contato">Contato</a>
+    </nav>
+    <!-- Trailing Action -->
+    <div class="flex items-center gap-4">
+      <a class="hidden sm:inline-flex items-center justify-center bg-secondary hover:bg-primary-container text-surface px-6 py-3 rounded-none text-label-md font-label-md uppercase tracking-wider transition-colors duration-200"
+        href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20site%20da%20Vitaly%20e%20gostaria%20de%20conhecer%20os%20tratamentos%20e%20agendar%20um%20atendimento."
+        rel="noopener noreferrer" target="_blank">
+        Agendar Avaliação
+      </a>
+      <a class="sm:hidden text-primary p-2"
+        href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20site%20da%20Vitaly%20e%20gostaria%20de%20conhecer%20os%20tratamentos%20e%20agendar%20um%20atendimento."
+        rel="noopener noreferrer" target="_blank">
+        <span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+      </a>
+    </div>
+  </header>
+  <main>
+    <!-- SEÇÃO 01 — HERO (Editorial Elegance) -->
+    <section
+      class="relative px-6 md:px-16 pt-12 md:pt-20 pb-20 md:pb-28 border-b border-outline-variant overflow-hidden">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <!-- Text Block (5 columns on desktop) -->
+        <div class="lg:col-span-6 flex flex-col justify-center">
+          <div class="inline-flex items-center gap-2 mb-6">
+            <span class="w-8 h-[1px] bg-secondary"></span>
+            <span class="text-label-sm font-label-sm uppercase tracking-[0.25em] text-secondary">Atelier Dermatológico
+              &amp; Longevidade</span>
+          </div>
+          <h1 class="text-headline-lg-mobile md:text-display-hero font-display-hero text-primary tracking-tight mb-8">
+            Realce sua beleza. <br class="hidden md:inline" />
+            <span class="italic font-normal text-secondary">Valorize sua essência.</span>
+          </h1>
+          <p class="text-body-lg font-body-lg text-on-surface-variant max-w-xl mb-10">
+            A harmonia não reside na padronização, mas na celebração minuciosa dos seus traços únicos. Desenvolvemos
+            protocolos integrados de dermatologia estética que preservam sua naturalidade com precisão clínica e
+            sensorialidade exclusiva.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+            <a class="bg-secondary hover:bg-primary-container text-surface px-8 py-4 rounded-none text-label-md font-label-md uppercase tracking-widest text-center transition-colors duration-200"
+              href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20site%20da%20Vitaly%20e%20gostaria%20de%20conhecer%20os%20tratamentos%20e%20agendar%20um%20atendimento."
+              rel="noopener noreferrer" target="_blank">
+              Agende sua avaliação
+            </a>
+            <a class="border border-primary-container text-primary hover:bg-primary-container hover:text-surface px-8 py-4 rounded-none text-label-md font-label-md uppercase tracking-widest text-center transition-colors duration-200"
+              href="#procedimentos">
+              Conheça nossos tratamentos
+            </a>
+          </div>
+          <!-- Micro Metadados de Confiança -->
+          <div class="grid grid-cols-3 gap-6 pt-12 mt-12 border-t border-outline-variant">
+            <div>
+              <span class="block text-headline-sm font-headline-sm text-primary">100%</span>
+              <span class="text-label-sm font-label-sm uppercase text-on-surface-variant">Personalizado</span>
+            </div>
+            <div>
+              <span class="block text-headline-sm font-headline-sm text-primary">Zero</span>
+              <span class="text-label-sm font-label-sm uppercase text-on-surface-variant">Artificialidade</span>
+            </div>
+            <div>
+              <span class="block text-headline-sm font-headline-sm text-primary">+8 Anos</span>
+              <span class="text-label-sm font-label-sm uppercase text-on-surface-variant">De Excelência</span>
+            </div>
+          </div>
+        </div>
+        <!-- Editorial Photography Composition (6 columns on desktop) -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative architectural-frame bg-surface-container p-3 md:p-5">
+            <div class="relative overflow-hidden aspect-[4/5] bg-surface-variant">
+              <img class="w-full h-full object-cover"
+                data-alt="A refined high-fashion portrait of an elegant woman with radiant, luminous bare skin and minimalist demeanor, photographed in soft studio daylight. The atmosphere embraces a muted earth-tone palette of creme, warm nude, and deep cafe tones, highlighting natural skin texture and timeless sophistication without superficial shine."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAt-a2L0gjV28zokvJj8Q14n27kGU6cexQQekfd0ephsCOo4ycXPM8NlUZelgRNGMCqrpdhk2_YJlRwd_F40jd-h_vcuz2JMvaECfYy2idGURJf95x7b3E8n9nkSS2dF7hFM1SW99p3-KyOa7DUikUiQjuOBHu90sWU8JSRRCcN95M4aa8En735ARFK7ZcbfPn4F4IgF5tOAC5AyTd4QOAM88zRQq19O_gDHK2szg" />
+            </div>
+            <!-- Hard Cast Floating Badge -->
+            <div
+              class="absolute -bottom-6 -left-6 bg-primary-container text-surface p-6 hidden sm:block architectural-frame max-w-xs shadow-planar">
+              <span
+                class="text-label-sm font-label-sm uppercase tracking-widest text-secondary-fixed block mb-1">Filosofia
+                Vitaly</span>
+              <p class="text-body-sm font-body-sm text-surface-dim italic">
+                "A verdadeira sofisticação é imperceptível aos olhos desatentos e inconfundível para quem a sente."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SEÇÃO 02 — SOBRE A VITALY / FILOSOFIA -->
+    <section class="px-6 md:px-16 py-20 md:py-28 bg-surface-container-low border-b border-outline-variant"
+      id="filosofia">
+      <div class="max-w-7xl mx-auto">
+        <!-- Section Eyebrow -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <span class="text-label-sm font-label-sm uppercase tracking-[0.25em] text-secondary block mb-3">01 / A Casa
+              de Cuidado</span>
+            <h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary">
+              Acolhimento, rigor técnico <br class="hidden sm:inline" />e a arte da sutileza.
+            </h2>
+          </div>
+          <p class="text-body-md font-body-md text-on-surface-variant max-w-md">
+            Criada para contrapor a pressa dos consultórios tradicionais, a Vitaly é um refúgio desenhado para quem
+            busca tratamentos clínicos de alto calibre com escuta ativa e tempo dedicado.
+          </p>
+        </div>
+        <!-- Bento Grid: Story & Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+          <!-- Main Atmosphere Visual -->
+          <div class="md:col-span-7 architectural-frame bg-surface-container overflow-hidden flex flex-col">
+            <div class="relative h-80 sm:h-96 w-full">
+              <img class="w-full h-full object-cover"
+                data-alt="An architectural interior view of an ultra-luxurious dermatology clinic sanctuary with minimalist textured plaster walls in creme and sand tones, natural linen drapery, and warm architectural indirect lighting. Deep dark walnut accents create a calm museum-grade atmosphere with zero clinical coldness."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDviFFAohea30kKo3yJN7bQ1HLGfj7sl2bR6fzr6atS-DFJEOC3_TLA28Eh2CHgHnmcCRP_56r91EyWYANCjzS_UDwy2vyMjug-t_5Gh3MErDFL9fWlwxyMz8_1tBahA5HEL96mDKqr2717O4EDJArxTeY-woiDII3PdqMout-R7O7ylg2QsT9yPD5yik9lAXVQsJ99qd7VU04CY3HuTO69kuq0c2pRxW-bnAl6VD4" />
+            </div>
+            <div class="p-8 md:p-10 bg-surface">
+              <h3 class="text-headline-sm font-headline-sm text-primary mb-3">Manifesto da Beleza Autêntica</h3>
+              <p class="text-body-md font-body-md text-on-surface-variant leading-relaxed mb-4">
+                Acreditamos que todo procedimento deve ser invisível em sua execução e retumbante em seu bem-estar. Não
+                transformamos pessoas em outras versões; refinamos o tempo com reverência à sua identidade morfológica
+                original.
+              </p>
+              <div class="flex items-center gap-4 text-label-md font-label-md uppercase tracking-wider text-secondary">
+                <span>Dra. Valéria Lins</span>
+                <span class="w-2 h-[1px] bg-secondary"></span>
+                <span class="text-on-surface-variant font-normal">Diretora Técnica &amp; Especialista</span>
+              </div>
+            </div>
+          </div>
+          <!-- 3 Architectural Slabs (Pillars) -->
+          <div class="md:col-span-5 flex flex-col justify-between gap-6">
+            <!-- Pillar 1 -->
+            <div
+              class="p-8 architectural-frame bg-surface hover:bg-surface-container transition-colors duration-200 flex-1">
+              <span class="text-label-sm font-label-sm uppercase tracking-widest text-secondary block mb-2">01.01</span>
+              <h4 class="text-headline-sm font-headline-sm text-primary mb-3">Atendimento Humanizado</h4>
+              <p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                Consultas individuais de até 90 minutos. Ouvimos sua história, mapeamos seu estilo de vida e desenhamos
+                seu cronograma sem protocolos engessados.
+              </p>
+            </div>
+            <!-- Pillar 2 -->
+            <div
+              class="p-8 architectural-frame bg-surface hover:bg-surface-container transition-colors duration-200 flex-1">
+              <span class="text-label-sm font-label-sm uppercase tracking-widest text-secondary block mb-2">01.02</span>
+              <h4 class="text-headline-sm font-headline-sm text-primary mb-3">Excelência Clínica Estrita</h4>
+              <p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                Substâncias biomédicas de procedência rastreada, certificação ouro pela ANVISA e atualizações anuais nos
+                maiores congressos globais de longevidade.
+              </p>
+            </div>
+            <!-- Pillar 3 -->
+            <div
+              class="p-8 architectural-frame bg-surface hover:bg-surface-container transition-colors duration-200 flex-1">
+              <span class="text-label-sm font-label-sm uppercase tracking-widest text-secondary block mb-2">01.03</span>
+              <h4 class="text-headline-sm font-headline-sm text-primary mb-3">Técnicas Não Invasivas</h4>
+              <p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                Estímulo fisiológico de colágeno e regeneração celular. Priorizamos tratamentos biocompatíveis que
+                trabalham em sinergia com o próprio organismo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SEÇÃO 03 — PROCEDIMENTOS (High Editorial Grid) -->
+    <section class="px-6 md:px-16 py-20 md:py-28 bg-surface border-b border-outline-variant" id="procedimentos">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <span class="text-label-sm font-label-sm uppercase tracking-[0.25em] text-secondary block mb-3">02 /
+              Portfólio de Cuidados</span>
+            <h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary">
+              Nossos Procedimentos
+            </h2>
+          </div>
+          <p class="text-body-md font-body-md text-on-surface-variant max-w-lg">
+            Terapias faciais e corporais sob medida, desenhadas para renovar viço, elasticidade e contornos com
+            delicadeza e equilíbrio anatômico.
+          </p>
+        </div>
+        <!-- Procedures Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <article
+            class="architectural-frame bg-surface-container-low flex flex-col group hover:border-secondary transition-all duration-300">
+            <div class="relative aspect-[16/10] overflow-hidden bg-surface-variant">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                data-alt="A delicate aesthetic clinical procedure image focusing on gentle facial touch and skin rejuvenation, with soft lighting and earth-toned surroundings of creme and muted terracota, capturing pure harmony and meticulous skin care."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqxo3FpeCFu4LnIPMSygQTbqgNix0cDP_8hCwhlLK-GOwxGSNJSKg6OD7lke3eX0d3VSabnKjGzCtC3PzgbgXHwmFJB1xe2pbmjnIKaX1m1sISuRVvWhEZfWf9CJCQK8zglNM1cecGPvCL52QWn8-oGZnQa9QF67vvWx2HIVyEpGbIoLAeWnnfCproe43qwowMODhfH7hcLwBPWygGIAnB2sRfVgCWWKsumL4Ku_Q" />
+              <span
+                class="absolute top-4 left-4 bg-surface text-primary px-3 py-1 text-label-sm font-label-sm uppercase architectural-frame">Facial</span>
+            </div>
+            <div class="p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-headline-sm font-headline-sm text-primary mb-3">Harmonização &amp; Rejuvenescimento</h3>
+                <p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed mb-6">
+                  Preenchimento anatômico e bioestimuladores de colágeno focados em restaurar proporções naturais e
+                  recuperar o contorno mandibular sem exageros volumétricos.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+                <span class="text-label-sm font-label-sm uppercase text-secondary">Tempo: 60 - 90 min</span>
+                <a class="inline-flex items-center gap-2 text-label-md font-label-md uppercase text-primary group-hover:text-secondary transition-colors duration-200"
+                  href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20informa%C3%A7%C3%B5es%20sobre%20Harmoniza%C3%A7%C3%A3o%20e%20Rejuvenescimento%20Facial%20na%20Vitaly."
+                  rel="noopener noreferrer" target="_blank">
+                  <span>Consultar</span>
+                  <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <!-- Card 2 -->
+          <article
+            class="architectural-frame bg-surface-container-low flex flex-col group hover:border-secondary transition-all duration-300">
+            <div class="relative aspect-[16/10] overflow-hidden bg-surface-variant">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                data-alt="Close up photography of pure glass skin glow showing ultra-hydrated micro-texture with soft natural dewy reflection in an ambient room with caramel and nude earthy shades, conveying deep hydration and clinical cellular nourishment."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrCui5HypliDBNdtyZLbCbNW2ZIFaHGTjytzYqkpRY5Cf8yzJt40WjkFCAS30efPOL12TpMhTaET_JqJ2QbQgqq2kfcnG3z7Nd3wnvzqwQs6mddaHDX6qkoJVYm7F7Li9-Vsfjg9BIbgIIqKQROT82l3Pw2bTVEs64bnnMXItdp8_qkPDfeXJ2s5g6YsR3wCsyUjsYvvZnyBON1mU2MA1uQXh7Snkup-fwhrXcSZk" />
+              <span
+                class="absolute top-4 left-4 bg-surface text-primary px-3 py-1 text-label-sm font-label-sm uppercase architectural-frame">Glow
+                &amp; Derme</span>
+            </div>
+            <div class="p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-headline-sm font-headline-sm text-primary mb-3">Skinbooster &amp; Luminosidade Celular
+                </h3>
+                <p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed mb-6">
+                  Infiltrações microscópicas de ácido hialurônico não-reticulado e aminoácidos essenciais para devolver
+                  viço profundo, poros fechados e hidratação interna.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+                <span class="text-label-sm font-label-sm uppercase text-secondary">Tempo: 45 min</span>
+                <a class="inline-flex items-center gap-2 text-label-md font-label-md uppercase text-primary group-hover:text-secondary transition-colors duration-200"
+                  href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20o%20protocolo%20de%20Skinbooster%20%26%20Glow%20na%20Vitaly."
+                  rel="noopener noreferrer" target="_blank">
+                  <span>Consultar</span>
+                  <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <!-- Card 3 -->
+          <article
+            class="architectural-frame bg-surface-container-low flex flex-col group hover:border-secondary transition-all duration-300">
+            <div class="relative aspect-[16/10] overflow-hidden bg-surface-variant">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                data-alt="Minimalist fine art aesthetic photo depicting smooth skin tightening and subtle neck or shoulder silhouette with delicate morning sunlight, high-fashion editorial styling, nude and deep coffee tones reflecting restorative body contouring."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA9MYv4X8Ij3tpqm-ImUYChwhN2IhSMgGZozlhDEqN0s4gyMfzx_5ZqGEc7sDAQtw_TklA06kYjO7vcfo0rqlBPs9C5Y25oNmsP1IkufkZH1RibFWs6n_Cims5oxLlRsqUDs2lI1HBwK_Y2X0wDvlNpxwXUQ0tzZTyFsqylfXDGYNmwWiQKrpTiwWLdBtE1dkyTio_giNh1S9WzqSvou-N_-oHmmu09tHOqzA9fS0" />
+              <span
+                class="absolute top-4 left-4 bg-surface text-primary px-3 py-1 text-label-sm font-label-sm uppercase architectural-frame">Corporal</span>
+            </div>
+            <div class="p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-headline-sm font-headline-sm text-primary mb-3">Estética Corporal Avançada</h3>
+                <p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed mb-6">
+                  Associação sinérgica de ultrassom microfocado, radiofrequência multipolar e drenagem biomecânica para
+                  tratar firmeza tissular e sustentação dérmica.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+                <span class="text-label-sm font-label-sm uppercase text-secondary">Tempo: 75 min</span>
+                <a class="inline-flex items-center gap-2 text-label-md font-label-md uppercase text-primary group-hover:text-secondary transition-colors duration-200"
+                  href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20tratamentos%20de%20Est%C3%A9tica%20Corporal%20Avan%C3%A7ada%20na%20Vitaly."
+                  rel="noopener noreferrer" target="_blank">
+                  <span>Consultar</span>
+                  <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <!-- Card 4 -->
+          <article
+            class="architectural-frame bg-surface-container-low flex flex-col group hover:border-secondary transition-all duration-300">
+            <div class="relative aspect-[16/10] overflow-hidden bg-surface-variant">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                data-alt="Detailed macro shot of fine line smoothing on a healthy woman cheek, highlighting velvety soft texture and refined skin tone in neutral warm lighting with earthy palette accents and impeccable clinical clarity."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMOcT7CjkAwK1iw73nUwrNTw4S4ObB7m7sfXODIpadxMMhozLT1k4ePR2RbtgiHgDsdKzJmLyKiqpLhhnQ0ukTBcHujq0wBuZIfMfcW3wgMR208wv2q1_k_obAdW3aZ7LKXXRE8c1UGW_5VP3IlfpHKpugUXQWPD50u5s5Hw4o7PBGmslYEZtsByvhpW9t4Fvl6S3ila0Ddy7K8YOJD058U6GkhGKX5pNeadhscso" />
+              <span
+                class="absolute top-4 left-4 bg-surface text-primary px-3 py-1 text-label-sm font-label-sm uppercase architectural-frame">Textura</span>
+            </div>
+            <div class="p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-headline-sm font-headline-sm text-primary mb-3">Linhas de Expressão &amp; Textura</h3>
+                <p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed mb-6">
+                  Modulação miomoduladora e peelings de cristais orgânicos para suavizar marcas do tempo sem congelar
+                  sua capacidade expressiva e autenticidade.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+                <span class="text-label-sm font-label-sm uppercase text-secondary">Tempo: 40 min</span>
+                <a class="inline-flex items-center gap-2 text-label-md font-label-md uppercase text-primary group-hover:text-secondary transition-colors duration-200"
+                  href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20procedimentos%20para%20Linhas%20e%20Textura%20na%20Vitaly."
+                  rel="noopener noreferrer" target="_blank">
+                  <span>Consultar</span>
+                  <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <!-- Card 5 -->
+          <article
+            class="architectural-frame bg-surface-container-low flex flex-col group hover:border-secondary transition-all duration-300">
+            <div class="relative aspect-[16/10] overflow-hidden bg-surface-variant">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                data-alt="Serene aesthetic spa therapy atmosphere showing precise application of calming serums with glass pipettes and organic botanical extracts, presented in an elegant warm sand and soft clay editorial studio lighting setting."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc3-yLpSu587aEGEoWJl5Y03q_HU6fZu61dslXWKPqIeM4LdQDOcplIRMU4RnE3EdkEQqt9DeR5ULzcC1rY1Th-_c9zWLNDsAr3Q_17F3v5bfLE2pGPAlalVHa6f0pAKstAije-8yKYyDNPs6o0ijEPW8bS0BksXJKZpbJ-KKggxQO0U9kTWh-SKedWzHYRpZP5NlXAWieFrODogEpeNZZlVW1dg3ljNPezhvt7C8" />
+              <span
+                class="absolute top-4 left-4 bg-surface text-primary px-3 py-1 text-label-sm font-label-sm uppercase architectural-frame">Regenerativo</span>
+            </div>
+            <div class="p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-headline-sm font-headline-sm text-primary mb-3">Laser Fracionado &amp; Microagulhamento
+                </h3>
+                <p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed mb-6">
+                  Indução percutânea de colágeno acoplada a drug delivery de fatores de crescimento botânicos para
+                  refinamento de cicatrizes e uniformidade de tom.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-outline-variant flex items-center justify-between">
+                <span class="text-label-sm font-label-sm uppercase text-secondary">Tempo: 60 min</span>
+                <a class="inline-flex items-center gap-2 text-label-md font-label-md uppercase text-primary group-hover:text-secondary transition-colors duration-200"
+                  href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20o%20Laser%20Fracionado%20na%20Vitaly."
+                  rel="noopener noreferrer" target="_blank">
+                  <span>Consultar</span>
+                  <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </article>
+          <!-- Card 6: Custom Protocol -->
+          <article
+            class="architectural-frame bg-primary-container text-surface flex flex-col justify-between p-8 md:p-10 shadow-planar">
+            <div>
+              <span
+                class="text-label-sm font-label-sm uppercase tracking-widest text-secondary-fixed block mb-3">Exclusividade
+                Vitaly</span>
+              <h3 class="text-headline-sm font-headline-sm text-surface mb-4">Protocolo Vitaly Signature</h3>
+              <p class="text-body-sm font-body-sm text-surface-dim leading-relaxed mb-8">
+                Um plano de 3 etapas que conjuga diagnóstico tridimensional de pele, desintoxicação dérmica profunda e
+                bioestímulo progressivo planejado para 6 meses.
+              </p>
+            </div>
+            <a class="inline-flex items-center justify-center bg-secondary hover:bg-surface hover:text-primary text-surface px-6 py-4 rounded-none text-label-md font-label-md uppercase tracking-widest transition-colors duration-200"
+              href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20uma%20avalia%C3%A7%C3%A3o%20para%20o%20Protocolo%20Vitaly%20Signature."
+              rel="noopener noreferrer" target="_blank">
+              Solicitar Programa Exclusivo
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- SEÇÃO 04 — RESULTADOS & TRANSFORMAÇÕES (COM COMPARADOR ANTES/DEPOIS FUNCIONAL) -->
+    <section class="px-6 md:px-16 py-20 md:py-28 bg-surface-container-high border-b border-outline-variant"
+      id="resultados">
+      <div class="max-w-7xl mx-auto">
+        <div class="max-w-2xl mb-14">
+          <span class="text-label-sm font-label-sm uppercase tracking-[0.25em] text-secondary block mb-3">03 /
+            Resultados Reais</span>
+          <h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary mb-4">
+            A harmonia da transformação invisível.
+          </h2>
+          <p class="text-body-md font-body-md text-on-surface-variant">
+            Arraste o cursor horizontalmente para observar a melhora evidente na vitalidade, uniformidade do manto
+            cutâneo e sustentação, mantendo 100% da identidade da paciente.
+          </p>
+        </div>
+        <!-- Before / After Interactive Slider Container -->
+        <div class="architectural-frame bg-surface p-4 sm:p-8 max-w-4xl mx-auto">
+          <div
+            class="relative w-full aspect-[4/3] sm:aspect-[16/10] overflow-hidden select-none cursor-ew-resize architectural-frame bg-surface-variant"
+            id="comparison-slider">
+            <!-- Imagem DEPOIS (Fundo base integral) -->
+            <img alt="Resultado Depois" class="absolute inset-0 w-full h-full object-cover pointer-events-none"
+              data-alt="Clinical after result of facial rejuvenation on a woman with refreshed radiant skin, reduced depth of nasolabial folds, natural luminosity, photographed in neutral studio lighting with warm creme tones and zero heavy filters."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV2y2_bZ2rorg6NNfY5g2hZjdZuVlPyIDnPisrCTpFnhzTzWprkOpYfkPl9x7bDZ4uEOHFtCLnAgn1wflrTfCKus86JtSA8JnZhZVOXUbQQEYt4HbRpn0QF-RJ-eTn7c5AKf6fNT4yGJFH0kQqIKwARcVz37me14MUFeWF6ruFeeQ1TwZYRuxFY5X_vfpXNwdjjuiYEyPXyuL0G7N6IHQaJ8ors2Py1RP7yhuTSy8" />
+            <span
+              class="absolute top-4 right-4 bg-primary text-surface px-3 py-1 text-label-sm font-label-sm uppercase z-10 architectural-frame">
+              Depois (45 dias)
+            </span>
+            <!-- Imagem ANTES (Sobreposta com largura dinâmica) -->
+            <div class="absolute inset-y-0 left-0 overflow-hidden w-1/2 pointer-events-none border-r-2 border-surface"
+              id="before-wrapper">
+              <img alt="Resultado Antes"
+                class="absolute top-0 left-0 max-w-none h-full w-[200%] sm:w-[100%] object-cover pointer-events-none"
+                data-alt="Clinical before aesthetic photography of the same woman prior to treatment, showing slight skin fatigue, subtle dullness, and minor fine lines under identical neutral lighting and angle, capturing authentic natural conditions."
+                id="before-img"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmwkGbTbYHPX7ZWwYRKhxRk0HPJXY2LLaRb2Fb4vDtu2yxD-Qw-pU3HRwlYpbWt1D2upX4JLwBmvNPyYqI824rjdBzyMXjeJ_lLPW6snTpFyoz5C7prUQWQb3ILWd7Zu6DtpWdwYBs8zTMiSGgpVf8JwUXSk0EYmce7mL3N3zrB6RcUG5Gy2NTD7torNgnqREVPjizyhdvnCJzxg0Ab4TBqeo7ZP2aCxLezqkHIBQ" />
+              <span
+                class="absolute top-4 left-4 bg-surface text-primary px-3 py-1 text-label-sm font-label-sm uppercase z-10 architectural-frame">
+                Antes
+              </span>
+            </div>
+            <!-- Divisor Vertical e Handle de Arrasto -->
+            <div
+              class="absolute inset-y-0 left-1/2 -ml-[18px] w-9 flex items-center justify-center cursor-ew-resize z-20"
+              id="slider-handle">
+              <div
+                class="w-9 h-9 bg-primary text-surface rounded-none flex items-center justify-center shadow-planar border border-surface">
+                <span class="material-symbols-outlined text-base" data-icon="sync_alt">sync_alt</span>
+              </div>
+            </div>
+          </div>
+          <!-- Legenda e Responsabilidade Técnica -->
+          <div
+            class="mt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pt-6 border-t border-outline-variant">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-secondary" data-icon="verified_user">verified_user</span>
+              <p class="text-body-sm font-body-sm text-on-surface-variant">
+                <strong>Protocolo Aplicado:</strong> Skinbooster Vitaly + Bioestímulo de Colágeno em 2 sessões.
+              </p>
+            </div>
+            <p class="text-[11px] text-outline font-body-sm max-w-md">
+              *Nota de responsabilidade técnica: Os resultados são individuais e dependem da resposta biológica,
+              genética e cuidados diários de cada paciente. Fotos sem retoques digitais.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SEÇÃO 05 — DIFERENCIAIS DE ATENDIMENTO -->
+    <section class="px-6 md:px-16 py-20 md:py-28 bg-surface border-b border-outline-variant" id="diferenciais">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-label-sm font-label-sm uppercase tracking-[0.25em] text-secondary block mb-3">04 / Padrão de
+            Atendimento</span>
+          <h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary mb-4">
+            A Experiência Vitaly em cada detalhe.
+          </h2>
+          <p class="text-body-md font-body-md text-on-surface-variant">
+            Criamos uma jornada sem pressa, onde sua individualidade dita o compasso de cada recomendação médica e
+            estética.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Item 1 -->
+          <div
+            class="architectural-frame bg-surface-container-low p-8 flex flex-col justify-between hover:bg-surface-container transition-colors duration-200">
+            <div>
+              <div class="w-12 h-12 bg-primary text-surface flex items-center justify-center mb-6">
+                <span class="material-symbols-outlined" data-icon="spa">spa</span>
+              </div>
+              <h3 class="text-headline-sm font-headline-sm text-primary mb-3">Ambiente Privativo</h3>
+              <p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                Salas com isolamento acústico e agendamentos espaçados garantem sigilo absoluto, serenidade e
+                pontualidade irrepreensível.
+              </p>
+            </div>
+            <span
+              class="text-label-sm font-label-sm uppercase text-secondary pt-6 block border-t border-outline-variant mt-6">Conforto
+              Imersivo</span>
+          </div>
+          <!-- Item 2 -->
+          <div
+            class="architectural-frame bg-surface-container-low p-8 flex flex-col justify-between hover:bg-surface-container transition-colors duration-200">
+            <div>
+              <div class="w-12 h-12 bg-primary text-surface flex items-center justify-center mb-6">
+                <span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+              </div>
+              <h3 class="text-headline-sm font-headline-sm text-primary mb-3">Planejamento Único</h3>
+              <p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                Nenhum tratamento começa sem um escaneamento completo do histórico da pele e desenho anatômico de metas
+                realistas.
+              </p>
+            </div>
+            <span
+              class="text-label-sm font-label-sm uppercase text-secondary pt-6 block border-t border-outline-variant mt-6">Rigor
+              Diagnóstico</span>
+          </div>
+          <!-- Item 3 -->
+          <div
+            class="architectural-frame bg-surface-container-low p-8 flex flex-col justify-between hover:bg-surface-container transition-colors duration-200">
+            <div>
+              <div class="w-12 h-12 bg-primary text-surface flex items-center justify-center mb-6">
+                <span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+              </div>
+              <h3 class="text-headline-sm font-headline-sm text-primary mb-3">Tecnologia Certificada</h3>
+              <p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                Equipamentos regulados com calibração contínua e marcas de produtos consagradas pelo FDA e ANVISA para
+                sua máxima segurança.
+              </p>
+            </div>
+            <span
+              class="text-label-sm font-label-sm uppercase text-secondary pt-6 block border-t border-outline-variant mt-6">Segurança
+              Total</span>
+          </div>
+          <!-- Item 4 -->
+          <div
+            class="architectural-frame bg-surface-container-low p-8 flex flex-col justify-between hover:bg-surface-container transition-colors duration-200">
+            <div>
+              <div class="w-12 h-12 bg-primary text-surface flex items-center justify-center mb-6">
+                <span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+              </div>
+              <h3 class="text-headline-sm font-headline-sm text-primary mb-3">Suporte Pós-Cuidado</h3>
+              <p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                Canal exclusivo para dúvidas, orientações pós-procedimento imediatas e consultas de retorno programadas
+                sem custos adicionais.
+              </p>
+            </div>
+            <span
+              class="text-label-sm font-label-sm uppercase text-secondary pt-6 block border-t border-outline-variant mt-6">Acompanhamento
+              Ativo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SEÇÃO 06 — AGENDAMENTO & CONVERSÃO (Destaque Café Profundo) -->
+    <section class="px-6 md:px-16 py-20 md:py-28 bg-primary-container text-surface">
+      <div class="max-w-5xl mx-auto architectural-frame border-outline p-8 md:p-16 bg-primary relative overflow-hidden">
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <span class="text-label-sm font-label-sm uppercase tracking-[0.3em] text-secondary-fixed mb-4">Seu Novo
+            Ritual</span>
+          <h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-surface max-w-2xl mb-6">
+            Seu momento de cuidar de você começa aqui.
+          </h2>
+          <p class="text-body-lg font-body-lg text-surface-dim max-w-xl mb-10">
+            Conheça nossos tratamentos e agende seu atendimento com a Vitaly. Reserve um horário com nossa equipe de
+            concierges e sinta a diferença de um plano feito sob medida.
+          </p>
+          <!-- WhatsApp Primary Action -->
+          <a class="inline-flex items-center gap-3 bg-secondary hover:bg-surface hover:text-primary text-surface px-10 py-5 rounded-none text-label-lg font-label-lg uppercase tracking-widest shadow-planar transition-all duration-200"
+            href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Conheci%20o%20site%20da%20Vitaly%20e%20gostaria%20de%20conhecer%20os%20tratamentos%20e%20agendar%20um%20atendimento."
+            rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-xl" data-icon="chat">chat</span>
+            <span>Agendar pelo WhatsApp</span>
+          </a>
+          <p class="text-[12px] font-body-sm text-on-primary-container mt-6 uppercase tracking-wider">
+            Resposta rápida em horário comercial • Atendimento em ambiente reservado
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- SEÇÃO 07 — CONTATO & LOCALIZAÇÃO -->
+    <section class="px-6 md:px-16 py-20 bg-surface border-b border-outline-variant" id="contato">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
+        <!-- Infos -->
+        <div class="md:col-span-5 flex flex-col justify-between">
+          <div>
+            <span class="text-label-sm font-label-sm uppercase tracking-[0.25em] text-secondary block mb-3">05 /
+              Localização &amp; Contato</span>
+            <h2 class="text-headline-md font-headline-md text-primary mb-6">Venha nos visitar</h2>
+            <p class="text-body-md font-body-md text-on-surface-variant mb-8">
+              Localizada no coração dos Jardins, nossa estrutura foi projetada para oferecer paz sensorial desde o
+              primeiro instante da sua chegada.
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary mt-1" data-icon="location_on">location_on</span>
+                <div>
+                  <h4 class="text-label-md font-label-md uppercase text-primary">Endereço</h4>
+                  <p class="text-body-sm font-body-sm text-on-surface-variant">Alameda Lorena, 1420 - Jardins, São Paulo
+                    - SP</p>
+                  <p class="text-body-sm font-body-sm text-outline">Estacionamento com manobrista no local</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary mt-1" data-icon="schedule">schedule</span>
+                <div>
+                  <h4 class="text-label-md font-label-md uppercase text-primary">Horário de Funcionamento</h4>
+                  <p class="text-body-sm font-body-sm text-on-surface-variant">Segunda a Sexta: 09h às 20h</p>
+                  <p class="text-body-sm font-body-sm text-on-surface-variant">Sábados: 09h às 15h (Com agendamento
+                    prévio)</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-secondary mt-1" data-icon="phone_iphone">phone_iphone</span>
+                <div>
+                  <h4 class="text-label-md font-label-md uppercase text-primary">Canais Diretos</h4>
+                  <p class="text-body-sm font-body-sm text-on-surface-variant">+55 (11) 99999-9999</p>
+                  <p class="text-body-sm font-body-sm text-on-surface-variant">contato@vitalyestetica.com.br</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pt-8 mt-8 border-t border-outline-variant flex gap-4">
+            <a class="p-3 architectural-frame text-primary hover:text-secondary hover:border-secondary transition-colors"
+              href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+              <span class="text-label-sm font-label-sm uppercase">Instagram @vitaly.estetica</span>
+            </a>
+          </div>
+        </div>
+        <!-- Quick Form / Message Card -->
+        <div class="md:col-span-7 architectural-frame bg-surface-container p-8 md:p-12">
+          <h3 class="text-headline-sm font-headline-sm text-primary mb-2">Envie uma mensagem</h3>
+          <p class="text-body-sm font-body-sm text-on-surface-variant mb-8">
+            Deseja tirar dúvidas sobre nossos tratamentos antes de agendar? Preencha os campos abaixo.
+          </p>
+          <form action="https://wa.me/5511999999999" class="space-y-6" method="GET" target="_blank">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-label-sm font-label-sm uppercase text-secondary mb-2">Seu Nome</label>
+                <input
+                  class="w-full bg-surface border border-outline-variant focus:border-secondary focus:ring-0 p-3 rounded-none text-body-sm text-primary"
+                  placeholder="Como podemos te chamar?" required="" type="text" />
+              </div>
+              <div>
+                <label class="block text-label-sm font-label-sm uppercase text-secondary mb-2">Telefone /
+                  WhatsApp</label>
+                <input
+                  class="w-full bg-surface border border-outline-variant focus:border-secondary focus:ring-0 p-3 rounded-none text-body-sm text-primary"
+                  placeholder="(11) 99999-9999" required="" type="tel" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-label-sm font-label-sm uppercase text-secondary mb-2">Procedimento de
+                Interesse</label>
+              <select
+                class="w-full bg-surface border border-outline-variant focus:border-secondary focus:ring-0 p-3 rounded-none text-body-sm text-primary">
+                <option value="Harmonizacao">Harmonização &amp; Rejuvenescimento</option>
+                <option value="Skinbooster">Protocolos de Skinbooster &amp; Glow</option>
+                <option value="Corporal">Estética Corporal Avançada</option>
+                <option value="Textura">Linhas de Expressão &amp; Textura</option>
+                <option value="Signature">Protocolo Vitaly Signature</option>
+                <option value="Outro">Outros cuidados / Primeira avaliação</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-label-sm font-label-sm uppercase text-secondary mb-2">Mensagem (Opcional)</label>
+              <textarea
+                class="w-full bg-surface border border-outline-variant focus:border-secondary focus:ring-0 p-3 rounded-none text-body-sm text-primary"
+                placeholder="Compartilhe seus objetivos com nossa equipe médica..." rows="3"></textarea>
+            </div>
+            <button
+              class="w-full bg-primary hover:bg-secondary text-surface py-4 text-label-md font-label-md uppercase tracking-widest transition-colors duration-200"
+              type="submit">
+              Enviar e Falar com Concierge
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- FOOTER (SHARED COMPONENT) -->
+  <footer
+    class="w-full px-6 md:px-16 py-12 md:py-16 flex flex-col justify-between items-center bg-primary dark:bg-inverse-surface border-t border-primary-container dark:border-outline text-surface dark:text-surface-bright">
+    <div
+      class="w-full max-w-7xl flex flex-col md:flex-row justify-between items-center gap-8 pb-10 border-b border-primary-container w-full">
+      <!-- Brand & Tagline -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left">
+        <span
+          class="text-headline-md font-headline-md text-surface dark:text-surface-bright tracking-tight">Vitaly</span>
+        <p class="text-body-sm font-body-sm text-on-primary-container mt-1">
+          Clínica Especializada em Dermatologia Estética, Equilíbrio &amp; Bem-Estar.
+        </p>
+      </div>
+      <!-- Links -->
+      <nav class="flex flex-wrap justify-center gap-6 md:gap-8">
+        <a class="text-label-sm font-label-sm uppercase text-surface dark:text-inverse-on-surface underline underline-offset-4 hover:text-secondary-fixed dark:hover:text-secondary transition-colors duration-200"
+          href="#">Termos de Uso</a>
+        <a class="text-label-sm font-label-sm uppercase text-on-primary-container dark:text-outline-variant hover:text-secondary-fixed dark:hover:text-secondary transition-colors duration-200"
+          href="#">Política de Privacidade</a>
+        <a class="text-label-sm font-label-sm uppercase text-on-primary-container dark:text-outline-variant hover:text-secondary-fixed dark:hover:text-secondary transition-colors duration-200"
+          href="#">Responsabilidade Técnica</a>
+        <a class="text-label-sm font-label-sm uppercase text-on-primary-container dark:text-outline-variant hover:text-secondary-fixed dark:hover:text-secondary transition-colors duration-200"
+          href="https://wa.me/5511999999999">Contato Direto</a>
+      </nav>
+    </div>
+    <!-- Copyright & Disclaimer -->
+    <div
+      class="w-full max-w-7xl flex flex-col sm:flex-row justify-between items-center gap-4 pt-8 text-center sm:text-left">
+      <p class="text-body-sm font-body-sm text-on-primary-container">
+        © 2024 Vitaly Clínica Estética &amp; Bem-Estar. Todos os direitos reservados.
+      </p>
+      <p class="text-[11px] font-body-sm text-on-primary-container tracking-wider">
+        CRM/SP 148.920 • RQE 78.431
+      </p>
+    </div>
+  </footer>
+  <!-- SCRIPT PARA COMPARADOR HORIZONTAL ANTES/DEPOIS FUNCIONAL -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('comparison-slider');
+      const beforeWrapper = document.getElementById('before-wrapper');
+      const handle = document.getElementById('slider-handle');
+      const beforeImg = document.getElementById('before-img');
+
+      if (!container || !beforeWrapper || !handle || !beforeImg) return;
+
+      let isDragging = false;
+
+      function updateSliderPosition(clientX) {
+        const rect = container.getBoundingClientRect();
+        let offsetX = clientX - rect.left;
+
+        // Clamp between 0% and 100%
+        if (offsetX < 0) offsetX = 0;
+        if (offsetX > rect.width) offsetX = rect.width;
+
+        const percentage = (offsetX / rect.width) * 100;
+
+        beforeWrapper.style.width = `${percentage}%`;
+        handle.style.left = `${percentage}%`;
+
+        // Keep internal image at 100% parent container width to prevent aspect stretch
+        beforeImg.style.width = `${rect.width}px`;
+      }
+
+      // Sync inner image size on resize
+      function syncDimensions() {
+        const rect = container.getBoundingClientRect();
+        beforeImg.style.width = `${rect.width}px`;
+      }
+
+      window.addEventListener('resize', syncDimensions);
+      syncDimensions();
+
+      // Mouse events
+      container.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        updateSliderPosition(e.clientX);
+      });
+
+      window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        updateSliderPosition(e.clientX);
+      });
+
+      window.addEventListener('mouseup', () => {
+        isDragging = false;
+      });
+
+      // Touch events for mobile responsiveness
+      container.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        if (e.touches[0]) updateSliderPosition(e.touches[0].clientX);
+      }, { passive: true });
+
+      window.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        if (e.touches[0]) updateSliderPosition(e.touches[0].clientX);
+      }, { passive: true });
+
+      window.addEventListener('touchend', () => {
+        isDragging = false;
+      });
+    });
+  </script>
+</body>
+
+</html>
